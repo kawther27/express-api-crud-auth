@@ -57,14 +57,16 @@ To use this app with your own API token:
           "password": "yourPassword"
         }
 2. **You can use Postman or code:**
-       ```bash
+     ```js
              axios.post("https://secrets-api.appbrewery.com/get-auth-token", {
              username: "yourUsername",
              password: "yourPassword" }).then(res => console.log(res.data.token));
 
 3. **Copy your token and paste it into your .env file like this:**
-         ```bash
+     ```bash
          BEARER_TOKEN=your_token_here
+
+
 🧪 How to Use the App
 Enter values into the form fields:
 
@@ -96,18 +98,18 @@ To keep your token safe:
        npm install dotenv
 
 2. **Create a .env file:**
-  ```bash
-   BEARER_TOKEN=your_token_here
+       ```bash
+        BEARER_TOKEN=your_token_here
 
 3. **In your index.js, add this at the top:**
-   ```bash
+     ```bash
     import dotenv from "dotenv";
     dotenv.config();
     const yourBearerToken = process.env.BEARER_TOKEN;
-4. **In .gitignore, be sure to add:**
 
- ```bash
-    .env
+4. **In .gitignore, be sure to add:**
+   ```bash
+     .env
 
 
 👩‍💻 Author
